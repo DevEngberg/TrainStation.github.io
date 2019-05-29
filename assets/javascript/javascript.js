@@ -1,5 +1,23 @@
+// Your web app's Firebase configuration
+// var config = {
+//     apiKey: "AIzaSyCcPFcbAjIsgXGQwE-A3AcOXkeD40qypE8",
+//     authDomain: "train-times-93583.firebaseapp.com",
+//     databaseURL: "https://train-times-93583.firebaseio.com",
+//     storageBucket: "train-times-93583.appspot.com"
+//   };
+  
+  var config = {
+    apiKey: "AIzaSyDToyij7_zSw3O_eOMlToU5zO0dQ0uuo7M",
+    authDomain: "ts-homework.firebaseapp.com",
+    databaseURL: "https://ts-homework.firebaseio.com",
+    storageBucket: "ts-homework.appspot.com"
+  };
 
+  firebase.initializeApp(config);
+  
+  var trainData = firebase.database();
 
+  console.log(firebase.database());
     // A variable to reference the database.
     var database = firebase.database();
 
@@ -60,4 +78,3 @@
         $("#age-display").html(snapshot.val().age);
         $("#comment-display").html(snapshot.val().comment);
     });
-});

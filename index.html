@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  	<meta charset="UTF-8">
-  	<title>Train Schedule</title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-	  <script>
-		// Initialize Firebase
-		var config = {
-		  apiKey: "AIzaSyDToyij7_zSw3O_eOMlToU5zO0dQ0uuo7M",
-		  authDomain: "ts-homework.firebaseapp.com",
-		  databaseURL: "https://ts-homework.firebaseio.com",
-		  projectId: "ts-homework",
-		  storageBucket: "ts-homework.appspot.com",
-		  messagingSenderId: "958942250103"
-		};
-		firebase.initializeApp(config);
-	  </script>
-	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>	<script src="assets/javascript/app.js" type="text/javascript"></script>
-	<script src="https://cdn.jsdelivr.net/momentjs/2.14.0/moment.min.js"></script>
-	<script src="javascript.js"></script>
+	<meta charset="UTF-8">
+	<title>Train Schedule</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Firebase Reference -->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+<!-- Moment.js Reference -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+Collapse
+
+
+
+
+
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 	<div class="container">
-	<div class="jumbotron text-center bg-warning text-black">
+		<div class="jumbotron text-center bg-warning text-black">
 			<h1>Train Times</h1>
 		</div>
 
 		<!-- Schedule Table -->
 
 		<div class="panel panel-success text-success">
-			<div class="panel-heading"><h3>Current Train Schedule</h3></div>
+			<div class="panel-heading">
+				<h3>Current Train Schedule</h3>
+			</div>
 			<div class="panel-body">
 				<table class="table">
-                
-            <thead>
-			<tr>
-			<th>Train Name</th>
-		    <th>Destination</th>
-			<th>Frequency(min)</th>
-			<th>Next Arrival</th>
-			<th>Minutes Away</th>
-			</tr>
-			</thead>
+
+					<thead>
+						<tr>
+							<th>Train Name</th>
+							<th>Destination</th>
+							<th>Frequency(min)</th>
+							<th>Next Arrival</th>
+							<th>Minutes Away</th>
+						</tr>
+					</thead>
 
 					<!-- Train Information -->
 					<tbody id="add-row">
 					</tbody>
-					
-			</table>
+
+				</table>
 			</div>
 		</div>
 
@@ -61,11 +69,11 @@
 			</div>
 
 			<div class="panel-body">
-			<form>
-			<div class="form-group">
-				<label for="text">Train Name</label>
-				<input type="text" class="form-control" id="train-name">
-			</div>
+				<form>
+					<div class="form-group">
+						<label for="text">Train Name</label>
+						<input type="text" class="form-control" id="train-name">
+					</div>
 
 					<div class="form-group">
 						<label for="text">Destination</label>
@@ -77,15 +85,18 @@
 						<input type="text" class="form-control" id="first-train">
 					</div>
 
-			<div class="form-group">
-					<label for="text">Frequency(min)</label>
-					<input type="text" class="form-control" id="frequency">
-			</div>
+					<div class="form-group">
+						<label for="text">Frequency(min)</label>
+						<input type="text" class="form-control" id="frequency">
+					</div>
 
-			<button type="submit" id="add-train" class="btn btn-primary" id="addTrain">Submit</button>
-		</form>
+					<button type="submit" id="add-train" class="btn btn-primary" id="addTrain">Submit</button>
+				</form>
+			</div>
 		</div>
 	</div>
-	</div>
 </body>
+<script src="assets/javascript/javascript.js"></script>
+
+
 </html>
